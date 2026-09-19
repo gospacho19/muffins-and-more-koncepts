@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="lv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Muffins and More · mafinu ceptuve · Ģertrūdes iela 9, Rīga</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,500;0,9..144,800;0,9..144,900;1,9..144,500&family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sacramento&display=swap" rel="stylesheet">
+<style>
+/* v4 — the logic of v3 (a centred menu board) filled with their material: the maroon of their price
+   tags as a field, the blue-and-yellow stripes of their "M" sign, their "M" itself, the enamel street
+   plate, the room with the arch, the counter, the muffins. Fraunces (soft) for the headlines — warm,
+   a little old-fashioned, like a bakery; Familjen Grotesk for everything else; Sacramento only where
+   the shop uses handwriting: on the tags and in the guests' notes beside each kind. */
+:root{--disp:"Fraunces",Georgia,serif;--sans:"Familjen Grotesk",system-ui,sans-serif;--hand:"Sacramento",cursive;
+--cream:#f4ead8;--paper:#fbf6ec;--ink:#221c18;--mute:#6a5f53;--maroon:#7b1e2e;--maroon-d:#5b1322;--blue:#7fb2d9;--yellow:#e8b64a;--line:rgba(34,28,24,.16);--pad:22px}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 1.05rem/1.55 var(--sans)}
+img{display:block;max-width:100%;height:auto}
+[data-lang][hidden]{display:none!important}
+.wrap{max-width:1120px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.notice{background:#1a120c;color:#c9bfae;font:500 .72rem/1.4 var(--sans);text-align:center;padding:6px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.notice b{color:#fff}
+.stripe{height:7px;background:repeating-linear-gradient(90deg,var(--blue) 0 14px,var(--yellow) 14px 28px)}
+
+/* top bar — their sign */
+.top{display:flex;justify-content:space-between;align-items:center;padding-top:14px;padding-bottom:14px}
+.top .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.top .brand img{width:52px;height:46px;object-fit:cover;object-position:50% 50%}
+.top .brand b{font:800 1.3rem/1 var(--disp);font-variation-settings:"SOFT" 100;letter-spacing:-.01em}
+.lang a{font:600 .8rem/1 var(--sans);color:var(--ink);text-decoration:none;margin-left:14px;opacity:.55;cursor:pointer;padding-bottom:3px}
+.lang a.on{opacity:1;border-bottom:2px solid var(--ink)}
+
+/* type */
+h1{font:900 clamp(2.4rem,5.6vw,4.7rem)/1 var(--disp);font-variation-settings:"SOFT" 100,"opsz" 144;letter-spacing:-.012em;margin:0}
+h2{font:800 clamp(1.75rem,3vw,2.6rem)/1.05 var(--disp);font-variation-settings:"SOFT" 100,"opsz" 96;letter-spacing:-.01em;margin:0 0 .35em}
+.sub{color:var(--mute);margin:0;font-size:1.05rem}
+section{padding:72px 0;text-align:center}
+section .wrap>*{margin-left:auto;margin-right:auto}
+
+/* actions */
+.btn{display:inline-block;background:var(--maroon);color:#fff;font:600 1rem/1 var(--sans);padding:1em 1.4em;text-decoration:none;border:0;cursor:pointer}
+.btn:hover{background:var(--maroon-d)}
+.tel{font:600 1rem/1 var(--sans);color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px}
+.acts{display:flex;gap:22px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:28px}
+
+/* the price tags — as on the counter */
+.tags{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:26px 0 0}
+.tag{display:inline-block;background:var(--maroon);color:#fff;font:400 1.6rem/1 var(--hand);padding:.55em .85em .38em;transform:rotate(-2deg);box-shadow:0 8px 14px -10px rgba(0,0,0,.5)}
+.tag+.tag{transform:rotate(1.5deg)}
+.tag b{font:700 1.2rem/1 var(--sans);vertical-align:.08em;margin-left:.15em}
+
+/* hero — desktop: the words in the middle, their photographs around */
+.hero{padding:18px 0 56px}
+.stage{position:relative;height:680px;display:flex;align-items:center;justify-content:center}
+.stage .say{width:44%;position:relative;z-index:1}
+.stage .say .sub{margin-top:18px;max-width:34ch}
+.ph{position:absolute;margin:0;overflow:hidden;background:#e8dfcf;box-shadow:0 18px 30px -22px rgba(40,20,10,.5)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph.a{left:0;top:0;width:27%;aspect-ratio:1}
+.ph.b{right:0;top:10px;width:21%;aspect-ratio:1}
+.ph.c{left:2%;bottom:0;width:25%;aspect-ratio:4/3}
+.ph.d{right:3%;bottom:0;width:18%;aspect-ratio:4/5}
+.ph.e{left:31%;bottom:0;width:13%;aspect-ratio:3/2;transform:rotate(-3deg)}
+.hero .phone{display:none}
+
+/* the board — the maroon of their tags, the kinds with the guests' words */
+.board{background:var(--maroon);color:#fff;padding:64px 0 60px}
+.board h2{color:#fff}
+.board .sub{color:#efd9d3}
+.board .grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:center;margin-top:34px;text-align:left}
+.kinds{list-style:none;padding:0;margin:0;columns:2;column-gap:36px}
+.kinds li{break-inside:avoid;padding:.55em 0;border-bottom:1px solid rgba(255,255,255,.18)}
+.kinds li b{display:block;font:600 1.12rem/1.3 var(--sans)}
+.kinds li i{display:block;font:400 1.22rem/1.15 var(--hand);color:#f6dfd7;margin-top:2px}
+.board .ph2{margin:0;aspect-ratio:1;overflow:hidden;box-shadow:0 26px 40px -28px rgba(0,0,0,.7)}
+.board .ph2 img{width:100%;height:100%;object-fit:cover}
+.board .more{margin:34px auto 0;max-width:62ch;color:#efd9d3}
+.board .more b{color:#fff;font:800 1.15rem/1.2 var(--disp);font-variation-settings:"SOFT" 100}
+.board .pair{display:none}
+
+/* the story */
+.story .grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:56px;align-items:center;text-align:left}
+.story .year{font:900 clamp(3.2rem,7vw,5.4rem)/1 var(--disp);font-variation-settings:"SOFT" 100,"opsz" 144;color:var(--maroon);margin:0 0 6px;letter-spacing:-.02em}
+.story h2{margin-bottom:.4em}
+.story p{margin:0 0 12px;font-size:1.08rem;max-width:52ch}
+.story blockquote{margin:22px 0 0;padding:0 0 0 18px;border-left:4px solid var(--maroon);font:italic 500 1.2rem/1.45 var(--disp);font-variation-settings:"SOFT" 100;max-width:52ch}
+.story cite{display:block;font:400 .88rem/1.4 var(--sans);font-style:normal;color:var(--mute);margin-top:8px}
+.story figure{margin:0;box-shadow:0 26px 40px -28px rgba(40,20,10,.55)}
+.story figure img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:50% 40%}
+
+/* the order form */
+.order{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.order .sub{max-width:56ch}
+.form{max-width:680px;margin:30px auto 0;background:#fff;border:1px solid var(--line);text-align:left}
+.form .head{background:var(--maroon);color:#fff;padding:14px 26px;font:800 1.15rem/1.2 var(--disp);font-variation-settings:"SOFT" 100}
+.form .body{padding:10px 26px 24px}
+.row{display:grid;grid-template-columns:130px minmax(0,1fr);gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.row:last-of-type{border-bottom:0}
+.row .k{font:600 .92rem/1.3 var(--sans);color:var(--ink)}
+.qty{display:flex;align-items:center;gap:12px}
+.qty button{width:36px;height:36px;border:2px solid var(--ink);background:transparent;font:700 1.2rem/1 var(--sans);color:var(--ink);cursor:pointer;padding:0}
+.qty output{font:700 1.35rem/1 var(--sans);min-width:2.2ch;text-align:center}
+.box{display:inline-flex;align-items:center;gap:9px;margin:2px 20px 2px 0;cursor:pointer;font:400 1rem/1.3 var(--sans);position:relative}
+.box input{position:absolute;opacity:0;width:0;height:0}
+.box i{width:20px;height:20px;border:2px solid var(--ink);display:inline-block;position:relative;flex:none;background:#fff}
+.box input:checked+i{background:var(--maroon);border-color:var(--maroon)}
+.box input:checked+i::after{content:"";position:absolute;left:5px;top:1px;width:5px;height:10px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(42deg)}
+.box small{color:var(--mute);font-size:.86rem}
+.form input[type=text],.form input[type=tel],.form input[type=date],.form select{width:100%;border:0;border-bottom:1.5px solid var(--ink);background:transparent;font:400 1.05rem/1.3 var(--sans);color:var(--ink);padding:6px 0;outline:none;border-radius:0;-webkit-appearance:none;appearance:none;min-height:38px}
+.form select{background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23221c18' stroke-width='2'/%3E%3C/svg%3E") no-repeat right center;padding-right:22px}
+.when{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:16px}
+.hint{font:400 .84rem/1.45 var(--sans);color:var(--mute);margin:6px 0 0}
+.sum{font:700 1.3rem/1.2 var(--sans);margin:22px 0 0}
+.sum small{display:block;font:400 .84rem/1.45 var(--sans);color:var(--mute);margin-top:4px}
+.msg{background:var(--cream);padding:14px 16px;font:400 .95rem/1.5 var(--sans);white-space:pre-wrap;margin:18px 0 18px;min-height:110px}
+.send{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.priv{font:400 .82rem/1.45 var(--sans);color:var(--mute);margin:14px 0 0}
+
+/* guests */
+.qs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:44px;margin-top:34px;max-width:1040px}
+.qs blockquote{margin:0;font:italic 500 1.3rem/1.35 var(--disp);font-variation-settings:"SOFT" 100;position:relative;padding-top:54px}
+.qs blockquote::before{content:"„";position:absolute;left:50%;top:-30px;transform:translateX(-50%);font:900 4.2rem/1 var(--disp);font-variation-settings:"SOFT" 100;color:var(--maroon);height:60px;overflow:hidden}
+.qs cite{display:block;font:400 .88rem/1.4 var(--sans);font-style:normal;color:var(--mute);margin-top:12px}
+.qs .tr{grid-column:1/-1;font:400 .84rem/1.4 var(--sans);color:var(--mute);margin:0}
+
+/* visit */
+.visit{background:var(--paper);border-top:1px solid var(--line)}
+.visit .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;text-align:left;max-width:1040px}
+.visit picture img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 45%;box-shadow:0 26px 40px -28px rgba(40,20,10,.55)}
+.hours{margin:18px 0 0;font-size:1.05rem}
+.hours b{display:inline-block;min-width:11.5em}
+.addr{margin:18px 0 0}
+.phone{display:inline-block;margin:14px 0 0;font:800 clamp(1.8rem,3vw,2.4rem)/1.1 var(--disp);font-variation-settings:"SOFT" 100;color:var(--ink);text-decoration:none;border-bottom:4px solid var(--maroon)}
+.links{margin:18px 0 0;font:600 .98rem/1.6 var(--sans)}
+.links a{color:var(--ink);text-decoration:underline;text-underline-offset:4px;margin-right:22px}
+.visit .small{display:none}
+
+footer{border-top:1px solid var(--line);padding:26px 0 40px;font:400 .82rem/1.55 var(--sans);color:var(--mute);text-align:center}
+footer p{margin:0 auto 8px;max-width:90ch}
+
+@media(max-width:860px){
+  section{padding:44px 0}
+  .top{padding-top:10px;padding-bottom:10px} .top .brand img{width:44px;height:38px} .top .brand b{font-size:1.15rem}
+  .hero{padding:0 0 36px}
+  .stage{height:auto;display:block}
+  .ph{display:none}
+  .hero .phone{display:block;margin:0 calc(var(--pad)*-1) 24px}
+  .hero .phone img{width:100%;height:46vh;object-fit:cover;object-position:50% 40%}
+  .stage .say{width:auto} .stage .say .sub{max-width:none}
+  h1{font-size:2.5rem}
+  .tags{gap:12px;margin-top:20px} .tag{font-size:1.45rem}
+  .acts{margin-top:22px;gap:16px}
+  .board{padding:40px 0 40px}
+  .board .grid{grid-template-columns:minmax(0,1fr);gap:22px;margin-top:22px}
+  .board .ph2{order:-1;margin:0 calc(var(--pad)*-1);aspect-ratio:4/3}
+  .kinds{columns:1}
+  .board .pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin:18px calc(var(--pad)*-1) 0}
+  .board .pair img{width:100%;aspect-ratio:1;object-fit:cover}
+  .story .grid{grid-template-columns:minmax(0,1fr);gap:22px;text-align:center}
+  .story figure{order:-1;margin:0 calc(var(--pad)*-1)} .story figure img{aspect-ratio:4/3}
+  .story p,.story blockquote{margin-left:auto;margin-right:auto;text-align:left}
+  .story .year{text-align:center}
+  .form .head{padding:12px 16px} .form .body{padding:6px 16px 18px}
+  .row{grid-template-columns:minmax(0,1fr);gap:6px}
+  .when{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:12px}
+  .qs{grid-template-columns:minmax(0,1fr);gap:34px;margin-top:26px}
+  .visit .grid{grid-template-columns:minmax(0,1fr);gap:22px;text-align:center}
+  .visit picture{margin:0 calc(var(--pad)*-1)} .visit picture img{box-shadow:none}
+  .hours b{min-width:0;display:block}
+  .visit .small{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin:26px 0 0;align-items:end}
+  .visit .small img{width:100%;aspect-ratio:1;object-fit:cover}
+}
+</style>
+</head>
+<body>
+<div class="notice"><b>Nikita</b> ·
+  <span data-lang="lv">Nesaistošs dizaina priekšlikums, nav ceptuves oficiālā lapa.</span>
+  <span data-lang="en" hidden>A non-binding design proposal, not the bakery's official site.</span>
+</div>
+<div class="stripe"></div>
+
+<div class="wrap top">
+  <a class="brand" href="#"><img src="img/sign.jpg" width="380" height="340" alt="Muffins and More — izkārtne ar M un mafinu"><b>Muffins and More</b></a>
+  <nav class="lang" aria-label="Valoda"><a data-set="lv" class="on">LV</a><a data-set="en">EN</a></nav>
+</div>
+
+<section class="hero"><div class="wrap">
+  <div class="stage">
+    <figure class="ph a"><img src="img/hero-sq.jpg" width="1400" height="1400" alt="Mafinu lete Ģertrūdes ielā 9 ar cenām uz stikla"></figure>
+    <figure class="ph b"><img src="img/pops2.jpg" width="1000" height="1000" loading="lazy" alt="Kūku pops ar sarkanām un rozā drumstalām"></figure>
+    <figure class="ph c"><img src="img/cupcakes.jpg" width="2000" height="1458" loading="lazy" alt="Kapkeiki un kūkas vitrīnā ar cenām uz dēlīšiem"></figure>
+    <figure class="ph d"><img src="img/coffee.jpg" width="900" height="1017" loading="lazy" alt="Kafijas tase un divi mafini uz galda"></figure>
+    <figure class="ph e"><img src="img/plate.jpg" width="480" height="300" loading="lazy" alt="Ielas plāksne: Ģertrūdes iela 9"></figure>
+    <figure class="phone"><img src="img/hero-m.jpg" width="1000" height="1250" fetchpriority="high" alt="Mafinu lete Ģertrūdes ielā 9 ar cenām uz stikla"></figure>
+    <div class="say">
+      <h1><span data-lang="lv">Rīgas pirmā mafinu ceptuve.</span><span data-lang="en" hidden>Riga's first muffin bakery.</span></h1>
+      <p class="sub"><span data-lang="lv">Ģertrūdes iela 9 · kopš 2011 · vairāk nekā 20 veidi katru dienu</span><span data-lang="en" hidden>Ģertrūdes iela 9 · since 2011 · more than 20 kinds every day</span></p>
+      <div class="tags">
+        <span class="tag"><span data-lang="lv">Mazais</span><span data-lang="en" hidden>Small</span><b>1,90 €</b></span>
+        <span class="tag"><span data-lang="lv">Lielais</span><span data-lang="en" hidden>Large</span><b>2,90 €</b></span>
+      </div>
+      <div class="acts">
+        <a class="btn" href="#pasutit"><span data-lang="lv">Pasūtīt svētkiem</span><span data-lang="en" hidden>Order for a party</span></a>
+        <a class="tel" href="tel:+37122130196">22 130 196</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="board"><div class="wrap">
+  <h2><span data-lang="lv">Vitrīnā</span><span data-lang="en" hidden>In the vitrine</span></h2>
+  <p class="sub"><span data-lang="lv">Katru dienu vairāk nekā 20 veidi. Daži no tiem — un ko par tiem saka viesi.</span><span data-lang="en" hidden>More than 20 kinds every day. Some of them — and what guests say about them.</span></p>
+  <div class="grid">
+    <ul class="kinds" data-lang="lv">
+      <li><b>Šokolādes ar sāļo karameli</b><i>„kaut kas svaigs, moderna un neparasta garša”</i></li>
+      <li><b>Avenes un svaigais siers</b><i>„ļoti mīksts un atgādina vecmāmiņas kūku”</i></li>
+      <li><b>Mellenes</b><i>uz sarkanā taga pie letes</i></li>
+      <li><b>Karamele</b><i>uz sarkanā taga pie letes</i></li>
+      <li><b>Marcipāns</b><i>uz sarkanā taga pie letes</i></li>
+      <li><b>Ābolu</b><i>no pirmā gada, 2011</i></li>
+      <li><b>Vaniļas krēms</b><i>no pirmā gada, 2011</i></li>
+      <li><b>Bezglutēna · vegāniskie · sāļie</b><i>„pieejamas dažas bezglutēna un vegāniskās versijas kā arī daži sāļie mafini”</i></li>
+    </ul>
+    <ul class="kinds" data-lang="en" hidden>
+      <li><b>Chocolate with salted caramel</b><i>“something fresh, a modern and unusual taste”</i></li>
+      <li><b>Raspberry and fresh cheese</b><i>“very soft, reminds me of grandmother's cake”</i></li>
+      <li><b>Blueberry</b><i>on a red tag at the counter</i></li>
+      <li><b>Caramel</b><i>on a red tag at the counter</i></li>
+      <li><b>Marzipan</b><i>on a red tag at the counter</i></li>
+      <li><b>Apple</b><i>from the first year, 2011</i></li>
+      <li><b>Vanilla cream</b><i>from the first year, 2011</i></li>
+      <li><b>Gluten-free · vegan · savoury</b><i>“a few gluten-free and vegan versions are available, as well as some savoury muffins” (translated)</i></li>
+    </ul>
+    <figure class="ph2"><img src="img/sokolades.jpg" width="1200" height="1200" loading="lazy" alt="Šokolādes mafins rokā pie ceptuves loga"></figure>
+  </div>
+  <p class="sub more"><span data-lang="lv"><b>…and More:</b> kapkeiki, siera kūkas, red velvet, kūku pops — arī uz vietas, ar cenu uz dēlīša.</span><span data-lang="en" hidden><b>…and More:</b> cupcakes, cheesecakes, red velvet, cake pops — also at the counter, priced on the slate.</span></p>
+  <div class="pair"><img src="img/cupcakes-m.jpg" width="1125" height="820" loading="lazy" alt="Kapkeiki un kūkas vitrīnā ar cenām uz dēlīšiem"><img src="img/pops2.jpg" width="1000" height="1000" loading="lazy" alt="Kūku pops ar sarkanām un rozā drumstalām"></div>
+</div></section>
+
+<section class="story"><div class="wrap"><div class="grid">
+  <div>
+    <p class="year">2011</p>
+    <h2><span data-lang="lv">No „Dambīšiem”</span><span data-lang="en" hidden>From the “Dambīši” farm</span></h2>
+    <p data-lang="lv">Ģimene ar saknēm Latvijā un Dānijā atvēra Rīgā pirmo specializēto mafinu ceptuvi. Receptes — Eiropas un Amerikas, sastāvdaļas — lielākoties Latvijas: augļi, ogas un garšaugi no ģimenes bioloģiskās saimniecības „Dambīši” Limbažu novadā.</p>
+    <p data-lang="en" hidden>A family with roots in Latvia and Denmark opened Riga's first specialised muffin bakery. European and American recipes, mostly Latvian ingredients: fruit, berries and herbs from the family's organic farm “Dambīši” near Limbaži.</p>
+    <blockquote data-lang="lv">„Mafini ir maigāki, ar augļu, ogu vai krēmveida pildījumu, tādēļ tie ir atšķirīgi no jau ierastajiem keksiņiem”<cite>Džeks Hansens, līdzīpašnieks — nra.lv, 12.01.2011</cite></blockquote>
+    <blockquote data-lang="en" hidden>“Muffins are softer, with a fruit, berry or cream filling, which is what sets them apart from the usual cakes”<cite>Jack Hansen, co-owner — nra.lv, 12 January 2011, translated from Latvian</cite></blockquote>
+  </div>
+  <figure><img src="img/room.jpg" width="1400" height="1108" loading="lazy" alt="Ceptuves telpa: arka, spuldzes, vitrīna ar kapkeikiem"></figure>
+</div></div></section>
+
+<section class="order" id="pasutit"><div class="wrap">
+  <h2><span data-lang="lv">Pasūtījums svētkiem</span><span data-lang="en" hidden>An order for a party</span></h2>
+  <p class="sub"><span data-lang="lv">Aizpildiet — ziņa sagatavojas pati un aiziet ceptuvei WhatsApp vai SMS. Iepakojums ir jau ziņā, lai kastes nav jāpārrunā pie letes.</span><span data-lang="en" hidden>Fill it in — the message writes itself and goes to the bakery on WhatsApp or SMS. Packaging is already in the message, so the boxes need no discussion at the counter.</span></p>
+  <form class="form" id="slip" onsubmit="return false">
+    <div class="head"><span data-lang="lv">Pasūtījuma zīme</span><span data-lang="en" hidden>Order slip</span></div>
+    <div class="body">
+    <div class="row"><span class="k"><span data-lang="lv">Cik</span><span data-lang="en" hidden>How many</span></span>
+      <div class="qty"><button type="button" id="minus" aria-label="mazāk">−</button><output id="qty">12</output><button type="button" id="plus" aria-label="vairāk">+</button></div></div>
+    <div class="row"><span class="k"><span data-lang="lv">Izmērs</span><span data-lang="en" hidden>Size</span></span>
+      <div>
+        <label class="box"><input type="radio" name="size" value="mazais" data-p="1.9"><i></i><span><span data-lang="lv">mazais</span><span data-lang="en" hidden>small</span> <small>1,90 €</small></span></label>
+        <label class="box"><input type="radio" name="size" value="lielais" data-p="2.9" checked><i></i><span><span data-lang="lv">lielais</span><span data-lang="en" hidden>large</span> <small>2,90 €</small></span></label>
+      </div></div>
+    <div class="row"><span class="k"><span data-lang="lv">Kādi</span><span data-lang="en" hidden>Which kinds</span></span>
+      <input type="text" id="kinds" data-ph-lv="piem., 6 mellenes, 6 karamele" data-ph-en="e.g. 6 blueberry, 6 caramel" placeholder="piem., 6 mellenes, 6 karamele" autocomplete="off"></div>
+    <div class="row"><span class="k"><span data-lang="lv">Iepakojums</span><span data-lang="en" hidden>Packaging</span></span>
+      <div>
+        <label class="box"><input type="radio" name="pack" value="kastes" checked><i></i><span data-lang="lv">salikt kastēs</span><span data-lang="en" hidden>packed in boxes</span></label>
+        <label class="box"><input type="radio" name="pack" value="trauks"><i></i><span data-lang="lv">ņemšu savā traukā</span><span data-lang="en" hidden>I'll bring my own tray</span></label>
+        <p class="hint"><span data-lang="lv">Kastu cenu pasaka ceptuve — ziņā tā tiek pajautāta.</span><span data-lang="en" hidden>The bakery quotes the box price — the message asks for it.</span></p>
+      </div></div>
+    <div class="row"><span class="k"><span data-lang="lv">Kad</span><span data-lang="en" hidden>When</span></span>
+      <div class="when"><input type="date" id="date"><select id="time"></select></div></div>
+    <div class="row"><span class="k"><span data-lang="lv">Vārds</span><span data-lang="en" hidden>Name</span></span><input type="text" id="name" autocomplete="name"></div>
+    <div class="row"><span class="k"><span data-lang="lv">Tālrunis</span><span data-lang="en" hidden>Phone</span></span><input type="tel" id="phone" autocomplete="tel" inputmode="tel"></div>
+    <p class="sum"><span id="sum"></span><small><span data-lang="lv">Cenas — kā uz vitrīnas stikla; galīgo summu apstiprina ceptuve.</span><span data-lang="en" hidden>Prices as on the counter glass; the bakery confirms the final sum.</span></small></p>
+    <div class="msg" id="msg" aria-live="polite"></div>
+    <div class="send">
+      <a class="btn" id="wa" href="#" rel="noopener"><span data-lang="lv">Sūtīt WhatsApp</span><span data-lang="en" hidden>Send on WhatsApp</span></a>
+      <a class="tel" id="sms" href="#"><span data-lang="lv">vai SMS</span><span data-lang="en" hidden>or SMS</span></a>
+      <a class="tel" href="tel:+37122130196"><span data-lang="lv">Zvanīt 22 130 196</span><span data-lang="en" hidden>Call 22 130 196</span></a>
+    </div>
+    <p class="priv"><span data-lang="lv">Ziņa top jūsu ierīcē — šī lapa neko neglabā.</span><span data-lang="en" hidden>The message is composed on your device — this page stores nothing.</span></p>
+    </div>
+  </form>
+</div></section>
+
+<section class="guests"><div class="wrap">
+  <h2><span data-lang="lv">Viesi</span><span data-lang="en" hidden>Guests</span></h2>
+  <p class="sub"><span data-lang="lv">4,7★ no 844 atsauksmēm Google kartēs</span><span data-lang="en" hidden>4.7★ from 844 reviews on Google Maps</span></p>
+  <div class="qs" data-lang="lv">
+    <blockquote>Nereāli garšīgie mafini.<cite>Olga L. · Google · 5★</cite></blockquote>
+    <blockquote>garšīgi muffini, nav sausi, iekšā pat pildījums pa labu cenu<cite>Gepards · Google · 5★</cite></blockquote>
+    <blockquote>Ļoti plaša mafinu izvēle.<cite>Kate K. · Google · 5★</cite></blockquote>
+  </div>
+  <div class="qs" data-lang="en" hidden>
+    <blockquote>Unreal, delicious muffins.<cite>Olga L. · Google · 5★</cite></blockquote>
+    <blockquote>tasty muffins, not dry, even a filling inside, for a good price<cite>Gepards · Google · 5★</cite></blockquote>
+    <blockquote>A very wide choice of muffins.<cite>Kate K. · Google · 5★</cite></blockquote>
+    <p class="tr">Translated from Latvian.</p>
+  </div>
+</div></section>
+
+<section class="visit"><div class="wrap"><div class="grid">
+  <picture><source media="(max-width:860px)" srcset="img/front-m.jpg"><img src="img/front.jpg" width="1500" height="1228" loading="lazy" alt="Ceptuves fasāde Ģertrūdes ielā 9"></picture>
+  <div>
+    <h2><span data-lang="lv">Ģertrūdes ielā 9</span><span data-lang="en" hidden>Ģertrūdes iela 9</span></h2>
+    <p class="hours" data-lang="lv"><b>Pirmdien – piektdien</b> 8:00 – 20:00<br><b>Sestdien – svētdien</b> 10:00 – 18:00</p>
+    <p class="hours" data-lang="en" hidden><b>Monday – Friday</b> 8:00 – 20:00<br><b>Saturday – Sunday</b> 10:00 – 18:00</p>
+    <p class="addr"><span data-lang="lv">Ģertrūdes iela 9, Rīga, LV-1010 · pie letes vai līdzi</span><span data-lang="en" hidden>Ģertrūdes iela 9, Rīga, LV-1010 · at the counter or to take away</span></p>
+    <a class="phone" href="tel:+37122130196">22 130 196</a>
+    <p class="links"><a href="https://www.google.com/maps/search/?api=1&query=Muffins+and+More+%C4%A2ertr%C5%ABdes+iela+9+R%C4%ABga" rel="noopener"><span data-lang="lv">Google kartē ↗</span><span data-lang="en" hidden>Google Maps ↗</span></a><a href="https://wolt.com/en/lva/riga/venue/muffins-and-more" rel="noopener">Wolt ↗</a></p>
+    <div class="small"><img src="img/plate.jpg" width="480" height="300" loading="lazy" alt="Ielas plāksne: Ģertrūdes iela 9"><img src="img/coffee.jpg" width="900" height="1017" loading="lazy" alt="Kafijas tase un divi mafini uz galda"></div>
+  </div>
+</div></div></section>
+
+<footer><div class="wrap">
+  <p><span data-lang="lv">Fotogrāfijas: Muffins and More un viesi Google kartēs (HaNa Park, DW, Steve Laudrup, Buddy Vlogs) · Fakti: nra.lv (12.01.2011), Google kartes.</span><span data-lang="en" hidden>Photographs: Muffins and More and guests on Google Maps (HaNa Park, DW, Steve Laudrup, Buddy Vlogs) · Facts: nra.lv (12 Jan 2011), Google Maps.</span></p>
+  <p><span data-lang="lv">Ja priekšlikums interesē — nākamais solis: jūsu pašu fotogrāfijas, pilns veidu saraksts ar cenām, šī lapa adresē muffinsandmore.lv un poga „Vietne” Google kartēs. Dizaina priekšlikums: Nikita · ngoloveckis@gmail.com</span><span data-lang="en" hidden>If this proposal is of interest — the next step: your own photographs, the full list of kinds with prices, this page at muffinsandmore.lv and the “Website” button on Google Maps. Design proposal: Nikita · ngoloveckis@gmail.com</span></p>
+</div></footer>
+
+<script>
+(function(){
+  const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+  let lang='lv', qty=12;
+  const T={
+    lv:{hello:'Labdien! Vēlos pasūtīt mafinus svētkiem.',qty:'Daudzums',small:'mazais',large:'lielais',kinds:'Kādi',pack:'Iepakojums',boxes:'salikt kastēs — lūdzu, pasakiet kastu cenu',tray:'ņemšu savā traukā',when:'Kad',about:'ap',name:'Vārds',phone:'Tālrunis',dash:'…',sum:'aptuveni',x:'×'},
+    en:{hello:'Hello! I would like to order muffins for a party.',qty:'Quantity',small:'small',large:'large',kinds:'Kinds',pack:'Packaging',boxes:'packed in boxes — please tell me the box price',tray:'I will bring my own tray',when:'When',about:'around',name:'Name',phone:'Phone',dash:'…',sum:'about',x:'×'}
+  };
+  const eur=n=>n.toFixed(2).replace('.',',')+' €';
+  const time=$('#time'); for(let h=8;h<=20;h++){for(const m of ['00','30']){if(h===20&&m==='30')continue;const o=document.createElement('option');o.value=o.textContent=String(h).padStart(2,'0')+':'+m;if(h===12&&m==='00')o.selected=true;time.appendChild(o)}}
+  const d=new Date();d.setDate(d.getDate()+1);$('#date').value=d.toISOString().slice(0,10);$('#date').min=new Date().toISOString().slice(0,10);
+  function fdate(v){if(!v)return T[lang].dash;const [y,m,dd]=v.split('-');return `${dd}.${m}.${y}`}
+  function build(){
+    const t=T[lang], size=$('input[name=size]:checked'), p=parseFloat(size.dataset.p), sizeName=size.value==='mazais'?t.small:t.large;
+    const total=qty*p;
+    $('#sum').textContent=`${qty} ${t.x} ${sizeName} ≈ ${eur(total)}`;
+    const pack=$('input[name=pack]:checked').value==='kastes'?t.boxes:t.tray;
+    const L=[t.hello,`${t.qty}: ${qty} ${t.x} ${sizeName} (${t.sum} ${eur(total)})`];
+    const k=$('#kinds').value.trim(); L.push(`${t.kinds}: ${k||t.dash}`);
+    L.push(`${t.pack}: ${pack}`);
+    L.push(`${t.when}: ${fdate($('#date').value)}, ${t.about} ${time.value}`);
+    L.push(`${t.name}: ${$('#name').value.trim()||t.dash} · ${t.phone}: ${$('#phone').value.trim()||t.dash}`);
+    const m=L.join('\n'); $('#msg').textContent=m;
+    $('#wa').href='https://wa.me/37122130196?text='+encodeURIComponent(m);
+    $('#sms').href='sms:+37122130196?&body='+encodeURIComponent(m);
+  }
+  function setLang(l){lang=l;$$('[data-lang]').forEach(e=>{e.hidden=e.dataset.lang!==l});document.documentElement.lang=l;$$('.lang a').forEach(a=>a.classList.toggle('on',a.dataset.set===l));$('#kinds').placeholder=$('#kinds').dataset['ph'+(l==='lv'?'Lv':'En')];build()}
+  $$('.lang a').forEach(a=>a.addEventListener('click',()=>setLang(a.dataset.set)));
+  $('#minus').addEventListener('click',()=>{qty=Math.max(4,qty-1);$('#qty').value=qty;build()});
+  $('#plus').addEventListener('click',()=>{qty=Math.min(300,qty+1);$('#qty').value=qty;build()});
+  $$('#slip input,#slip select').forEach(e=>{e.addEventListener('input',build);e.addEventListener('change',build)});
+  build();
+})();
+</script>
+</body>
+</html>
